@@ -1,15 +1,1 @@
-  jQuery(document).ready(function($){
-                $(".tabs-widget-content-widget-themater_tabs-1432447472-id").hide();
-                $("ul.tabs-widget-widget-themater_tabs-1432447472-id li:first a").addClass("tabs-widget-current").show();
-                $(".tabs-widget-content-widget-themater_tabs-1432447472-id:first").show();
-      
-                $("ul.tabs-widget-widget-themater_tabs-1432447472-id li a").click(function() {
-                    $("ul.tabs-widget-widget-themater_tabs-1432447472-id li a").removeClass("tabs-widget-current a");
-                    $(this).addClass("tabs-widget-current");
-                    $(".tabs-widget-content-widget-themater_tabs-1432447472-id").hide();
-                    var activeTab = $(this).attr("href");
-                    $(activeTab).fadeIn();
-                    return false;
-                });
-            });       
-
+$(function(){$("#select-tab li:first").addClass("selected");$("#sidebar-main > div").hide();$("#sidebar-main > div:first").show();$("#select-tab a").click(function(){$("#select-tab li").removeClass("selected");$(this).parent().addClass("selected");var a=$(this).attr("href");$("#sidebar-main >
